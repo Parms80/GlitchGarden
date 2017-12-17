@@ -3,12 +3,12 @@ using System.Collections;
 
 [RequireComponent (typeof (Attacker))]
 public class fox : Attacker {
-	private Animator animator;
+	private Animator anim;
 	private Attacker attacker;
 
 	// Use this for initialization
 	void Start () {
-		animator = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 		attacker = GetComponent<Attacker>();
 	}
 	
@@ -26,9 +26,9 @@ public class fox : Attacker {
 		}
 
 		if (otherObject.GetComponent<Stone> ()) {
-			animator.SetTrigger ("jump trigger");
+			anim.SetTrigger ("jump trigger");
 		} else {
-			animator.SetBool ("isAttacking", true);
+			anim.SetBool ("isAttacking", true);
 			attacker.Attack (otherObject);
 		}
 	}

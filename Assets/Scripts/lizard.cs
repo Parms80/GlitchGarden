@@ -3,12 +3,12 @@ using System.Collections;
 
 [RequireComponent (typeof (Attacker))]
 public class lizard : Attacker {
-	private Animator animator;
+	private Animator anim;
 	private Attacker attacker;
 
 	// Use this for initialization
 	void Start () {
-		animator = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 		attacker = GetComponent<Attacker>();
 	}
 
@@ -25,7 +25,7 @@ public class lizard : Attacker {
 			return;
 		}
 
-		animator.SetBool ("isAttacking", true);
+		anim.SetBool ("isAttacking", true);
 		attacker.Attack (otherObject);
 	}
 }
