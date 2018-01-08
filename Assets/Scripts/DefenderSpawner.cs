@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DefenderSpawner : MonoBehaviour {
 
-	public Camera camera;
+	public Camera myCamera;
 	private GameObject parent;
 
 	// Use this for initialization
@@ -34,7 +34,7 @@ public class DefenderSpawner : MonoBehaviour {
 	}
 
 	Vector2 CalculateWorldPointOfMouseClick() {
-		Vector3 worldPoint = camera.ScreenToWorldPoint (Input.mousePosition);
+		Vector3 worldPoint = myCamera.ScreenToWorldPoint (Input.mousePosition);
 		return new Vector2 (worldPoint.x, worldPoint.y);
 	}
 

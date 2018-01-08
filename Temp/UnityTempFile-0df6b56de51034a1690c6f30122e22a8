@@ -77,10 +77,10 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
-'Assets/DefenderSpawner.cs'
 'Assets/Scripts/Attacker.cs'
 'Assets/Scripts/Button.cs'
 'Assets/Scripts/Defender.cs'
+'Assets/Scripts/DefenderSpawner.cs'
 'Assets/Scripts/Health.cs'
 'Assets/Scripts/LevelManager.cs'
 'Assets/Scripts/MusicManager.cs'
@@ -91,10 +91,12 @@
 'Assets/Scripts/SetStartVolume.cs'
 'Assets/Scripts/Shooter.cs'
 'Assets/Scripts/Shredder.cs'
+'Assets/Scripts/Spawner.cs'
 'Assets/Scripts/Splash.cs'
 'Assets/Scripts/Stone.cs'
 'Assets/Scripts/TransitionEffect.cs'
 'Assets/Scripts/fox.cs'
 'Assets/Scripts/lizard.cs'
+'Assets/StarDisplay.cs'
 -r:'/Applications/Unity534/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity534/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
