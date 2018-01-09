@@ -5,13 +5,14 @@ using System.Collections;
 [RequireComponent (typeof(Text))]
 public class StarDisplay : MonoBehaviour {
 
+	public enum Status {SUCCESS, FAILURE};
 	private Text starsText;
-	private int numStars;
+	private int numStars = 100;
 
 	// Use this for initialization
 	void Start () {
 		starsText = GetComponent<Text> ();
-		numStars = 0;
+		UpdateDisplay ();
 	}
 
 	public void AddStars (int amount) {
@@ -20,9 +21,15 @@ public class StarDisplay : MonoBehaviour {
 		UpdateDisplay ();
 	}
 
-	public void UseStars (int amount) {
-		numStars -= amount;
-		UpdateDisplay ();
+	public Status UseStars (int amount) {
+		if (numStars >= amount) {
+			numStars -= amount;
+			UpdateDisplay ();
+			print ("SUCCESS");
+			return Status.SUCCESS;
+		}
+		print ("FAILURE");
+		return Status.FAILURE;
 	}
 
 	private void UpdateDisplay() {
