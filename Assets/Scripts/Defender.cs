@@ -9,7 +9,6 @@ public class Defender : MonoBehaviour {
 	void Start () {
 		starDisplay = GameObject.FindObjectOfType<StarDisplay> ();
 		Debug.Log ("Defender: starDisplay = " + starDisplay);
-		UseStars (starCost);
 	}
 
 	// Only being used as a tag for now
